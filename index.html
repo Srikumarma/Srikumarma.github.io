@@ -2,132 +2,158 @@
 <html>
 <head>
   <title>Srikumar M A</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-  /* Header styles */
-header {
-  background-color: #333;
-  color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.logo a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.menu li {
-  margin-left: 20px;
-}
-
-.menu li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Hamburger menu styles */
-.menu-icon {
-  cursor: pointer;
-  display: none;
-}
-
-.menu-icon span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 5px;
-  transition: all 0.2s ease-in-out;
-}
-
-.menu-toggle:checked + .menu-icon .navicon {
-  background-color: transparent;
-}
-
-.menu-toggle:checked + .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.menu-toggle:checked + .menu-icon .navicon:after {
-  transform: rotate(45deg);
-  bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-    padding-left: 0;
-  }
-
-  .menu li {
-    margin: 10px 0;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  .menu-toggle:checked + .menu {
-    display: flex;
-  }
-}
-
+    /* Header styles */
+    header {
+        background-color: #3498db;
+        color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
   
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
   
+      .logo a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+      .menu {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+  
+      .menu li {
+        margin-left: 20px;
+      }
+  
+      .menu li a {
+        color: #fff;
+        text-decoration: none;
+      }
+  
+      /* Hamburger menu styles */
+      .menu-icon {
+        cursor: pointer;
+        display: none;
+        color: #fff;
+      }
+  
+      .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        transition: all 0.2s ease-in-out;
+      }
+  
+      .menu-toggle:checked + .menu-icon .navicon {
+        background-color: #000;
+      }
+  
+      .menu-toggle:checked + .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+        background-color: #fff;
+      }
+  
+      .menu-toggle:checked + .menu-icon .navicon:after {
+        transform: rotate(45deg);
+        bottom: 0;
+        background-color: #fff;
+      }
+  
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+  
+        .menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          margin-top: 10px;
+          padding-left: 0;
+        }
+  
+        .menu li {
+          margin: 10px 0;
+        }
+  
+        .menu-icon {
+          display: block;
+        }
+  
+        .menu-toggle:checked + .menu {
+          display: flex;
+        }
+      }
   </style>
-
 </head>
 <body>
   <header>
-  <nav class="navbar">
-    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
-    <label for="navbar-toggle" class="menu-icon">
-      <span class="navicon"></span>
-    </label>
-    <div class="logo">
-      <!-- Your logo or website name here -->
-      <a href="#">My Website</a>
-    </div>
-    <ul class="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#internships">Internships</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#interests">Interests</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="logo">
+        <!-- Your logo or website name here -->
+        <a class="navbar-brand" href="#">My Website</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#internships">Internships</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#interests">Interests</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
+  <!-- Add your content sections here -->
+
+  <!-- Include Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
 
