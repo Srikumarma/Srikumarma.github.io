@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Total Purchase Amount Form</title>
+  <style>
+  /* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hamburger menu styles */
+.menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-toggle:checked + .menu-icon .navicon {
+  background-color: transparent;
+}
+
+.menu-toggle:checked + .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.menu-toggle:checked + .menu-icon .navicon:after {
+  transform: rotate(45deg);
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-toggle:checked + .menu {
+    display: flex;
+  }
+}
+
+  
+  
+  </style>
+
+</head>
+<body>
+  <header>
+  <nav class="navbar">
+    <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
+    <label for="navbar-toggle" class="menu-icon">
+      <span class="navicon"></span>
+    </label>
+    <div class="logo">
+      <!-- Your logo or website name here -->
+      <a href="#">My Website</a>
+    </div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#internships">Internships</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#interests">Interests</a></li>
+    </ul>
+  </nav>
+</header>
+
+</body>
+</html>
 
