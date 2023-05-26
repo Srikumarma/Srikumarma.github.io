@@ -157,10 +157,113 @@
           accent-color: #fff;
           background-color: #fff;
         }
+
+        .box {
+          background-color: #fff;
+          padding: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          position: relative;
+          animation: revolution-animation 10s infinite linear;
+        }
+    
+       
+
+        .eruption-container {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+          overflow:hidden;
+        }
+    
+        .eruption-text {
+          position:absolute;
+          top: 80%;
+          
+          transform: translate(-50%, 50%);
+          font-size: 5rem;
+          animation: eruption-animation 7s infinite;
+        }
+    
+        @keyframes eruption-animation {
+          0% {
+            top: 50%;
+            right: 50%;
+            left: 30%;
+            font-size: 2rem;
+          }
+          100% {
+            top: -100%;
+            left: calc(50% + 1000px);
+            font-size: 10rem;
+          }
+        }
       
   </style>
 </head>
 <body>
+  <script>
+    function changeTextColor() {
+      var text = document.getElementById('popText');
+      var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Add more colors as desired
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+      text.style.color = randomColor;
+    }
+
+    setInterval(changeTextColor, 2000); // Change color every 2 seconds
+  </script><script>
+    function createTextEruption() {
+      var eruptionContainer = document.getElementById('eruptionContainer');
+      var eruptionText = document.createElement('div');
+      eruptionText.className = 'eruption-text';
+      eruptionText.innerText = 'Srikumar is Awesome';
+
+      var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Add more colors as desired
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+      eruptionText.style.color = randomColor;
+
+      eruptionContainer.appendChild(eruptionText);
+
+      setTimeout(function() {
+        eruptionText.remove();
+      }, 5000); // Remove the text after 5 seconds
+    }
+
+    setInterval(createTextEruption, 100); // Create text eruption every 100 milliseconds
+  </script><script>
+    function createTextEruption() {
+      var eruptionContainer = document.getElementById('eruptionContainer');
+      var eruptionText = document.createElement('div');
+      eruptionText.className = 'eruption-text';
+  
+      var motivationalWords = ['Possimpabile', 'Inspiration', 'Determination', 'Courage', 'Perseverance', 'Dream', 'Focus', 'Passion']; // Add more motivational words as desired
+      var randomWord = motivationalWords[Math.floor(Math.random() * motivationalWords.length)];
+      eruptionText.innerText = randomWord;
+  
+      var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Add more colors as desired
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+      eruptionText.style.color = randomColor;
+  
+      var randomTop = Math.random() * 300; // Random top position between 0 and 100
+      var randomVelocityX = Math.random() * 9 + 5; // Random X velocity between 5 and 10
+  
+      eruptionText.style.transform = 'translate(-50%, -50%)';
+      eruptionText.style.animation = 'eruption-animation 5s infinite';
+  
+      eruptionText.style.top = 'calc(' + randomTop + '% + ' + (randomTop * 20) + 'px)';
+      eruptionText.style.right = '100%';
+      eruptionContainer.appendChild(eruptionText);
+  
+      setTimeout(function() {
+        eruptionText.style.left = '-100%';
+      }, 10); // Delay the initial movement slightly
+  
+      setTimeout(function() {
+        eruptionText.remove();
+      }, 5000); // Remove the text after 5 seconds
+    }
+  
+    setInterval(createTextEruption, 1000); // Create text eruption every 1 second
+  </script>
   <header>
     <nav class="navbar navbar-expand-lg">
       <button id='icon' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -215,19 +318,24 @@
 
   <main>
     <section id="home">
+      <div id="eruptionContainer" class="eruption-container"></div>
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
+            
             <div class="box">
               <div class="image-circle"></div>
               <div class="about-me">
                 <h2>About Me</h2>
                 <p>I am a B.tech Computer Science student who is interested in working in the field of Data Science and Machine learning. Hardworking, resourceful individual, and a team player. Working towards learning new technologies and gaining real-world industry knowledge.</p>
+                
               </div>
             </div>
+            
           </div>
         </div>
       </div>
+      
     </section>
 
     <!-- Other sections (e.g., skills, education, etc.) go here -->
