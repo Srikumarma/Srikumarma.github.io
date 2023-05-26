@@ -16,6 +16,8 @@
         z-index: 100;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
+
+      
   
       .navbar {
         display: flex;
@@ -99,19 +101,70 @@
   
         .menu-icon {
           display: block;
+          cursor: pointer;
+          color: #fff;
         }
   
         .menu-toggle:checked + .menu {
           display: flex;
         }
       }
+
+        .box {
+          background-color: #fff;
+          padding: 20px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          animation: shadow-animation 3s infinite alternate;
+        }
+        .row {
+          margin-top: 110px;
+          margin-right: -15px;
+          margin-left: -15px;
+      }
+      
+        @keyframes shadow-animation {
+          0% {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          }
+          100% {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+          }
+        }
+      
+        .image-circle {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          background-color: #ccc;
+          margin-bottom: 20px;
+          /* Add your image as a background image here */
+        }
+      
+        .about-me h2 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+      
+        .about-me p {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+
+        .navbar-toggler-icon span{
+
+          color: #fff;
+          accent-color: #fff;
+          background-color: #fff;
+        }
+      
   </style>
 </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-lg">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #fff;">
+      <button id='icon' class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="logo">
@@ -145,11 +198,40 @@
       </div>
     </nav>
   </header>
-  <br><br><br>
-  <div>
-  <h1 style="color: #3498db">Website Under Construction</h1> 
-  </div>
-  <!-- Add your content sections here -->
+
+  <main>
+    <section id="home">
+      <!-- Home section content -->
+    </section>
+
+    <section id="about">
+      <!-- About Me section content -->
+    </section>
+
+<body>
+  <header>
+    <!-- Header content -->
+  </header>
+
+  <main>
+    <section id="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="box">
+              <div class="image-circle"></div>
+              <div class="about-me">
+                <h2>About Me</h2>
+                <p>I am a B.tech Computer Science student who is interested in working in the field of Data Science and Machine learning. Hardworking, resourceful individual, and a team player. Working towards learning new technologies and gaining real-world industry knowledge.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other sections (e.g., skills, education, etc.) go here -->
+  </main>
 
   <!-- Include Bootstrap JS and jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
